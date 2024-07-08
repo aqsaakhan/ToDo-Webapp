@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Welcome, {{ current_user.username }}</h1>
+    <form action="{{ url_for('add_todo') }}" method="post">
+        <input type="text" name="title" placeholder="Task title" required>
+        <textarea name="description" placeholder="Task description" rows="3"></textarea>
+        <button type="submit">Add Task</button>
+    </form>
+    <ul class="todo-list">
+        {% for todo in todos %}
+            <li class="todo-item {% if todo.completed %}completed{% endif %}">
+                <h3>{{ todo.title }}</h3>
+                <p>{{ todo.description }}</p>
+                <div class="actions">
+                    <a href="{{ url_for('complete_todo', id=todo.id) }}">{% if todo.completed %}Undo{% else %}Complete{% endif %}</a>
+                    <a href="{{ url_for('edit_todo', id=todo.id) }}">Edit</a>
+                    <a href="{{ url_for('delete_todo', id=todo.id) }}">Delete</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"], input[type="password"], textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.todo-item p {
+    margin: 0 0 1rem 0;
+}
+
+.todo-item.completed h3,
+.todo-item.completed p {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.actions a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.actions a:hover {
+    color: var(--secondary-color);
+}
+
+.alert {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+.app-name a {
+    color: white;
+    text-decoration: none;
+}
+
+.app-name a:hover {
+    text-decoration: underline;
+}
